@@ -1,0 +1,1 @@
+~/bin/incsub -n 200 -s 1 chips.psfex.joblist

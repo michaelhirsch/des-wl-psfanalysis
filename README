@@ -1,0 +1,6 @@
+Code for analysing PSF models for Weak Lensing in DES. In particular
+this code is for the analysis of the DESDM PSFEx and Shapelet PSF
+model for SPTE of SVA1.
+
+Michael Hirsch (c) 14 February 2014
+Contact: michael.hirsch@ucl.ac.uk

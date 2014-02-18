@@ -1,0 +1,36 @@
+# these are the commands to be run.  if you only have a 
+# single command, you can use a single line such as 
+# command: ./script
+
+command: |
+    source /direct/astro+u/mhirsch/.tcshrc      
+    cd /direct/astro+astronfs01/workarea/mhirsch/projects/psf_analysis
+    python compute_rho_stats.py DECam_{exp} /direct/astro+astronfs01/workarea/mhirsch/projects/psf_analysis/results /direct/astro+astronfs01/workarea/mhirsch/projects/psf_analysis/rhostats {psf} {flag}
+
+# show this name in job listings instead of the command
+job_name: DECam_{exp}_{ccd}
+
+# this is the type of node/host selection. bynode means select entire
+# nodes.
+mode: bycore
+
+# Since the mode is bynode, this means 5 full nodes
+# N: 5
+
+# Select from this group(s)
+group: [new, new2, new3]
+
+# Do not select from this set of groups
+notgroup: [slow,crappy]
+
+# require at least this many cores
+# min_cores: 8
+
+# used by MPI jobs
+# hostfile: auto
+
+# If we have 5 full nodes of 12 cores each,
+# there is 60 cores in total. Threads:4 ensures each
+# host is listed 3 times. So the command above will
+# run 15 MPI nodes of 4 threads each
+# threads: 4
