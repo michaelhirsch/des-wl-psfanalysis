@@ -2,5 +2,27 @@ Code for analysing PSF models for Weak Lensing in DES. In particular
 this code is for the analysis of the DESDM PSFEx and Shapelet PSF
 model for SPTE of SVA1.
 
+See the Redmine DES wikipage for more information on the project:
+
+https://cdcvs.fnal.gov/redmine/projects/deswlwg/wiki/PSF_Model_Analysis
+
+
+Quick note on the code:
+
+psf_analyser.py            - is the main working horse for the catalogue generation
+compute_rho_stats.py       - main script for the computation of the rho statistics
+launcher.py                - helps to create the launcher files required by wq, 
+                             i.e. scheduler on BNL
+launcher_rho.py            - ditto, to create launchers for the computation of the 
+                             rho statistics
+config.rho1.template       - template configuration files for Athena
+config.rho2.template       - template configuration files for Athena
+corr2.config.rho1.template - template configuration file for corr2 by Mike Jarvis
+im3shape_psf_tools.py      - contains a Python implementation of im3shape's functions
+                             for PSF handling 
+evaluate.py                - script for making plots
+spte_iz_list               - exposure list (borrowed from Bob Armstrong)
+
+
 Michael Hirsch (c) 14 February 2014
 Contact: michael.hirsch@ucl.ac.uk
